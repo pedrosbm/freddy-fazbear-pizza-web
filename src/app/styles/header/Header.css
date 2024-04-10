@@ -1,12 +1,8 @@
-.header {
-    height: 15rem;
-    background-color: #fff;
-}
-
 .upperHeader {
+    background-color: white;
     display: flex;
     align-items: center;
-    justify-content: end;
+    justify-content: center;
 }
 
 .icons .clickable {
@@ -15,7 +11,8 @@
 
 .icons  {
     display: flex;
-    align-items: center;
+    position: absolute;
+    right: 0;
 }
 
 .cart   {
@@ -29,12 +26,6 @@
     border: dashed 1.5px;
     padding: 5px;
     border-radius: 10px;
-}
-
-.logoContainer  {
-    top: 0;
-    right: 22rem;
-    position: relative;
 }
 
 .downHeader {

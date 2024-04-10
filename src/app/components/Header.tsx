@@ -16,7 +16,7 @@ const Header = () => {
                 <div className='upperHeader'>
                     <div className='logoContainer'>
                         <Link to='/'>
-                            <Image width="200" className='icon' src={logo} alt='logo' />
+                            <Image width="180" className='icon' src={logo} alt='logo' />
                         </Link>
                     </div>
 
