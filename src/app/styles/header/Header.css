@@ -1,0 +1,17 @@
+/* EF3741 */
+
+.upperHeader {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+}
+
+.icons .clickable {
+    margin-right: 1rem;
+}
+
+.logoContainer  {
+    top: 0;
+    right: 30rem;
+    position: absolute;
+}
