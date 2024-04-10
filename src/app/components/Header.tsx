@@ -1,5 +1,6 @@
 import Image from 'next/image'
 import { Link } from 'react-router-dom'
+import { useState } from 'react'
 
 import logo from '../imgs/logo.png'
 import cart from '../imgs/cart.png'
@@ -7,6 +8,8 @@ import user from '../imgs/user.png'
 
 
 const Header = () => {
+    const [itens, setItens] = useState(0)
+
     return (
         <>
             <section className='header'>
@@ -21,6 +24,7 @@ const Header = () => {
                         <Link to="none" className='cart clickable'>
                             <Image width="50" className='clickButton' src={cart} alt='cart' />
                         </Link>
+                            <p className='counter'>{itens}</p>
 
                         <Link to="none" className='user clickable'>
                             <Image width="50" src={user} alt='user' />
