@@ -9,7 +9,7 @@ import user from '../imgs/user.png'
 const Header = () => {
     return (
         <>
-            <section>
+            <section className='header'>
                 <div className='upperHeader'>
                     <div className='logoContainer'>
                         <Link to='/'>

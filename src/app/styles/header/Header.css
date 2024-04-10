@@ -1,4 +1,7 @@
-/* EF3741 */
+.header {
+    height: 15rem;
+    background-color: #fff;
+}
 
 .upperHeader {
     display: flex;
@@ -12,6 +15,33 @@
 
 .logoContainer  {
     top: 0;
-    right: 30rem;
-    position: absolute;
+    right: 22rem;
+    position: relative;
+}
+
+.downHeader {
+    background-color: #EF3741;
+}
+
+nav ul li   {
+    list-style: none;
+}
+
+.downHeader nav ul{
+    display: flex;
+    justify-content: center;
+    font-weight: 600;
+}
+
+.downHeader nav ul li{
+    transition: 0.2s;
+    padding: 1.5rem 2rem;
+    color: white;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.downHeader nav ul li:hover{
+    color: #EF3741;
+    background-color: white;
 }
