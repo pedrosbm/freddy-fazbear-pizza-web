@@ -23,8 +23,8 @@ const Header = () => {
                     <div className='icons'>
                         <Link to="none" className='cart clickable'>
                             <Image width="50" className='clickButton' src={cart} alt='cart' />
-                        </Link>
                             <p className='counter'>{itens}</p>
+                        </Link>
 
                         <Link to="none" className='user clickable'>
                             <Image width="50" src={user} alt='user' />
