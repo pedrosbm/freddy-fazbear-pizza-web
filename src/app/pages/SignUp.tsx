@@ -2,6 +2,7 @@ import { use, useState } from "react"
 import Header2 from "../components/Header2"
 import { json } from "stream/consumers"
 
+import '../styles/form/Form.css'
 
 const SignUp = () => {
     const [form, setForm] = useState({
