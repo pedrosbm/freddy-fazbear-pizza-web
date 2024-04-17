@@ -1,4 +1,4 @@
-import { useState } from "react"
+import { use, useState } from "react"
 import Header2 from "../components/Header2"
 import { json } from "stream/consumers"
 
@@ -22,6 +22,7 @@ const SignUp = () => {
     }
 
     const handleSubmit = async (e: any) => {
+        e.preventDefault();
         if (confirm == form.senha) {
             fetch("https://localhost:8080/user", {
                 method: 'POST',
