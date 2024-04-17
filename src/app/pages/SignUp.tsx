@@ -7,7 +7,7 @@ const SignUp = () => {
     const [form, setForm] = useState({
         "nome": "",
         "email": "",
-        "senha": "",
+        "senha": ""
     })
 
     const [confirm, setConfirm] = useState("")
@@ -24,7 +24,7 @@ const SignUp = () => {
     const handleSubmit = async (e: any) => {
         e.preventDefault();
         if (confirm == form.senha) {
-            fetch("https://localhost:8080/user", {
+            fetch("http://localhost:8080/user", {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
