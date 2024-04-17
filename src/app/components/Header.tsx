@@ -25,7 +25,7 @@ const Header = () => {
                             <p className='counter'>{itens}</p>
                         </Link>
 
-                        <Link to="/Account" className='user clickable'>
+                        <Link to={localStorage.getItem("logado") == "true" ? "/Account" : "/SignUp"} className='user clickable'>
                             <Image width="50" src={user} alt='user' />
                         </Link>
                     </div>

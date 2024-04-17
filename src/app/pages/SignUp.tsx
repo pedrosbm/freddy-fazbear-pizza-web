@@ -3,26 +3,24 @@ import Header2 from "../components/Header2"
 
 
 const SignUp = () => {
-    type Cliente = {
-        "nome": string,
-        "email": string,
-        "senha": string
+    const [form, setForm] = useState({
+        "nome": "",
+        "email": "",
+        "senha": ""
+    })
+
+    const handleChange = (e: any) => {
+        const {name, value} = e.target
+        setForm({...form, [name]: value})
     }
 
-    const [form, setForm] = useState<Cliente>()
-
-    const handleChange = (e : any) =>{
-        console.log(e.target.name)
-        console.log(e.target.value)
+    const handleSubmit = () => {
+        
     }
 
-    const handleSubmit = () =>{
-
-    }
-
-    return(
+    return (
         <>
-            <Header2/>
+            <Header2 />
             <section className="form">
                 <h2>CREATE YOUR ACCOUNT</h2>
                 <form onSubmit={handleSubmit}>
@@ -50,12 +48,12 @@ const SignUp = () => {
                     <div className="inputContainer">
                         <span>Confirm password</span>
                         <div>
-                            <input name="senha" type="password" onChange={handleChange} />
+                            <input name="confirmarSenha" type="password" />
                         </div>
                     </div>
 
                     <button className="submitButton"><img src="" alt="{img check}" />FINISH</button>
-                    
+
                 </form>
             </section>
         </>

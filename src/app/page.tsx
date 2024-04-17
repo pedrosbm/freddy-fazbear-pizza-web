@@ -11,7 +11,8 @@ const Home = () =>{
         <Router>
             <Routes>
                 <Route path="/" Component={HomePage}/>
-                <Route path="/Account" Component={ localStorage.getItem("loged") == "true" ? Account : SignUp}/>
+                <Route path="/Account" Component={Account}/>
+                <Route path="/SignUp" Component={SignUp}/>
             </Routes>
         </Router>
     )
