@@ -6,7 +6,6 @@ import logo from '../imgs/logo.png'
 import cart from '../imgs/cart.png'
 import user from '../imgs/user.png'
 
-
 const Header = () => {
     const [itens, setItens] = useState(0)
 
@@ -21,12 +20,12 @@ const Header = () => {
                     </div>
 
                     <div className='icons'>
-                        <Link to="none" className='cart clickable'>
+                        <Link to="/Cart" className='cart clickable'>
                             <Image width="50" className='clickButton' src={cart} alt='cart' />
                             <p className='counter'>{itens}</p>
                         </Link>
 
-                        <Link to="none" className='user clickable'>
+                        <Link to="/Account" className='user clickable'>
                             <Image width="50" src={user} alt='user' />
                         </Link>
                     </div>
