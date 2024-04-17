@@ -6,16 +6,24 @@ const SignUp = () => {
     const [form, setForm] = useState({
         "nome": "",
         "email": "",
-        "senha": ""
+        "senha": "",
     })
+
+    const [confirm, setConfirm] = useState("")
 
     const handleChange = (e: any) => {
         const {name, value} = e.target
         setForm({...form, [name]: value})
     }
 
-    const handleSubmit = () => {
-        
+    const handleConfirmationChange = (e: any) => {
+        setConfirm(e.target.value)
+    }
+
+    const handleSubmit = async (e: any) => {
+        if(confirm == form.senha){
+            fetch("", )
+        }
     }
 
     return (
@@ -48,7 +56,7 @@ const SignUp = () => {
                     <div className="inputContainer">
                         <span>Confirm password</span>
                         <div>
-                            <input name="confirmarSenha" type="password" />
+                            <input name="confirm" type="password" onChange={handleConfirmationChange}/>
                         </div>
                     </div>
 
