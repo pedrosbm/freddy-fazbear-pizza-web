@@ -1,5 +1,6 @@
 import { useState } from "react"
 import Header2 from "../components/Header2"
+import { json } from "stream/consumers"
 
 
 const SignUp = () => {
@@ -12,8 +13,8 @@ const SignUp = () => {
     const [confirm, setConfirm] = useState("")
 
     const handleChange = (e: any) => {
-        const {name, value} = e.target
-        setForm({...form, [name]: value})
+        const { name, value } = e.target
+        setForm({ ...form, [name]: value })
     }
 
     const handleConfirmationChange = (e: any) => {
@@ -21,8 +22,14 @@ const SignUp = () => {
     }
 
     const handleSubmit = async (e: any) => {
-        if(confirm == form.senha){
-            fetch("", )
+        if (confirm == form.senha) {
+            fetch("https://localhost:8080/user", {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(form)
+            })
         }
     }
 
@@ -56,7 +63,7 @@ const SignUp = () => {
                     <div className="inputContainer">
                         <span>Confirm password</span>
                         <div>
-                            <input name="confirm" type="password" onChange={handleConfirmationChange}/>
+                            <input name="confirm" type="password" onChange={handleConfirmationChange} />
                         </div>
                     </div>
 
