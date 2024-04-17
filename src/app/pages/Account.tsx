@@ -2,11 +2,13 @@ import Header from "../components/Header"
 
 import { useState, useEffect } from "react"
 
-useEffect(() => {
-    
-}, [])
 
 const Account = ()=>{
+    
+    useEffect(() => {
+        console.log("Teste")
+    }, [])
+
     return(
         <>
             <Header/>

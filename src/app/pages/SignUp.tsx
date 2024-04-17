@@ -12,7 +12,8 @@ const SignUp = () => {
     const [form, setForm] = useState<Cliente>()
 
     const handleChange = (e : any) =>{
-        console.log(e.name.target)
+        console.log(e.target.name)
+        console.log(e.target.value)
     }
 
     const handleSubmit = () =>{
@@ -23,14 +24,37 @@ const SignUp = () => {
         <>
             <Header2/>
             <section className="form">
+                <h2>CREATE YOUR ACCOUNT</h2>
                 <form onSubmit={handleSubmit}>
                     <div className="inputContainer">
-                        <label htmlFor=""></label>
+                        <span>Full name</span>
                         <div>
                             <input name="nome" type="text" onChange={handleChange} />
                         </div>
                     </div>
 
+                    <div className="inputContainer">
+                        <span>Email</span>
+                        <div>
+                            <input name="email" type="email" onChange={handleChange} />
+                        </div>
+                    </div>
+
+                    <div className="inputContainer">
+                        <span>Password</span>
+                        <div>
+                            <input name="senha" type="password" onChange={handleChange} />
+                        </div>
+                    </div>
+
+                    <div className="inputContainer">
+                        <span>Confirm password</span>
+                        <div>
+                            <input name="senha" type="password" onChange={handleChange} />
+                        </div>
+                    </div>
+
+                    <button className="submitButton"><img src="" alt="{img check}" />FINISH</button>
                     
                 </form>
             </section>
