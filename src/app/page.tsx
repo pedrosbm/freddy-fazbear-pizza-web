@@ -10,7 +10,7 @@ const Home = () =>{
     return(
         <Router>
             <Routes>
-                <Route path="/" Component={SignUp}/>
+                <Route path="/" Component={Home}/>
                 <Route path="/Account" Component={Account}/>
                 <Route path="/SignUp" Component={SignUp}/>
             </Routes>
