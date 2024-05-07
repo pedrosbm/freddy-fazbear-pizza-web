@@ -6,11 +6,11 @@ import SignUp from "./pages/SignUp"
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom"
 import "./styles/Reset.css"
 
-const Home = () =>{
+const Page = () =>{
     return(
         <Router>
             <Routes>
-                <Route path="/" Component={Home}/>
+                <Route path="/" Component={SignUp}/>
                 <Route path="/Account" Component={Account}/>
                 <Route path="/SignUp" Component={SignUp}/>
             </Routes>
@@ -18,4 +18,4 @@ const Home = () =>{
     )
 }
 
-export default Home
+export default Page
