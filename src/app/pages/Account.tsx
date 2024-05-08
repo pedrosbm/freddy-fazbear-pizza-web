@@ -12,7 +12,7 @@ const Account = ()=>{
     return(
         <>
             <Header/>
-
+            
         </>
     )
 }
