@@ -3,6 +3,7 @@ import { Cliente, LoginForm } from "../types"
 import '../styles/form/Form.css'
 
 import Header2 from "../components/Header2"
+import Header from "../components/Header"
 
 const SignIn = () => {
     const [form, setForm] = useState<LoginForm>()
@@ -18,30 +19,29 @@ const SignIn = () => {
 
     const handleSubmit = async (e: any) => {
         e.preventDefault();
-        await fetch("http://localhost:8080/login", {
+        await fetch("http://localhost:5001/login", {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
             },
             body: JSON.stringify(form)
         }).then(response => {
-            if (response.status == 404) {
+            if (!response.ok) {
                 setLoginError(true)
+                return "vefirique suas credenciais"
             }
             return response.json()
         }).then(json => {
             console.log(json)
-            setLoginError(false)
-            setCliente(json)
         })
 
     }
 
     return (
         <>
-            <Header2 />
+            <Header />
             <section className="form">
-                <h2>CREATE YOUR ACCOUNT</h2>
+                <h2>LOG INTO YOUR ACCOUNT</h2>
                 <form onSubmit={handleSubmit}>
                     <div className="inputContainer">
                         <span>Email</span>

@@ -12,7 +12,7 @@ const Page = () =>{
         <Router>
             <Routes>
                 <Route path="/" Component={SignIn}/>
-                <Route path="/Account" Component={Account}/>
+                <Route path="/Account" Component={SignUp}/>
                 <Route path="/SignUp" Component={SignUp}/>
             </Routes>
         </Router>

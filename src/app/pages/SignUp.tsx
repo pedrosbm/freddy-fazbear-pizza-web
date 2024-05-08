@@ -4,6 +4,7 @@ import { json } from "stream/consumers"
 
 import '../styles/form/Form.css'
 import { SignUpForm } from "../types"
+import Header from "../components/Header"
 
 const SignUp = () => {
     const [form, setForm] = useState<SignUpForm>()
@@ -22,19 +23,23 @@ const SignUp = () => {
     const handleSubmit = async (e: any) => {
         e.preventDefault();
         if (confirm == form?.senha) {
-            await fetch("http://localhost:8080/user", {
+            await fetch("http://localhost:5001/user", {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
                 },
                 body: JSON.stringify(form)
+            }).then(response => {
+                if (response.ok) {
+                    // Efetuar o login
+                }
             })
         }
     }
 
     return (
         <>
-            <Header2 />
+            <Header />
             <section className="form">
                 <h2>CREATE YOUR ACCOUNT</h2>
                 <form onSubmit={handleSubmit}>
