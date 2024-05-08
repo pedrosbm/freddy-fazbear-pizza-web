@@ -1,5 +1,5 @@
 import { use, useState, useEffect } from "react"
-import { LoginForm } from "../types"
+import { Cliente, LoginForm } from "../types"
 import '../styles/form/Form.css'
 
 import Header2 from "../components/Header2"
@@ -8,6 +8,8 @@ const SignIn = () => {
     const [form, setForm] = useState<LoginForm>()
 
     const [loginError, setLoginError] = useState<boolean>()
+
+    const [cliente, setCliente] = useState<Cliente>()
 
     const handleChange = (e: any) => {
         const { name, value } = e.target
@@ -28,9 +30,9 @@ const SignIn = () => {
             }
             return response.json()
         }).then(json => {
-            // Armazenar id do usuário nos cookies
-            
-            // navegar pra conta
+            console.log(json)
+            setLoginError(false)
+            setCliente(json)
         })
 
     }
