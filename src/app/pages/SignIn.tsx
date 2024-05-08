@@ -1,8 +1,8 @@
 import { use, useState, useEffect } from "react"
-import Header2 from "../components/Header2"
-
-import '../styles/form/Form.css'
 import { LoginForm } from "../types"
+import '../styles/form/Form.css'
+
+import Header2 from "../components/Header2"
 
 const SignIn = () => {
     const [form, setForm] = useState<LoginForm>()
@@ -29,7 +29,7 @@ const SignIn = () => {
             return response.json()
         }).then(json => {
             // Armazenar id do usuário nos cookies
-
+            
             // navegar pra conta
         })
 
@@ -55,7 +55,7 @@ const SignIn = () => {
                         </div>
                     </div>
                     {/* Not found error */}
-                    {notFoundError == true ? <p>Verifique as suas credenciais</p> : <></>}
+                    {loginError == true ? <p>Verifique as suas credenciais</p> : <></>}
 
                     <button className="submitButton"><img src="" alt="{img check}" />FINISH</button>
 
