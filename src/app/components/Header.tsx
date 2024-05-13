@@ -6,8 +6,9 @@ import logo from '../imgs/logo.png'
 import cart from '../imgs/cart.png'
 import user from '../imgs/user.png'
 
+import '../styles/header/Header.css'
+
 const Header = () => {
-    const [itens, setItens] = useState(0)
 
     return (
         <>
@@ -22,7 +23,7 @@ const Header = () => {
                     <div className='icons'>
                         <Link to="/Cart" className='cart clickable'>
                             <Image width="50" className='clickButton' src={cart} alt='cart' />
-                            <p className='counter'>{itens}</p>
+                            <p className='counter'>{localStorage.getItem("cartCount")}</p>
                         </Link>
 
                         <Link to={localStorage.getItem("logado") == "true" ? "/Account" : "/SignUp"} className='user clickable'>

@@ -1,9 +1,9 @@
 import { use, useState, useEffect } from "react"
 import { Cliente, LoginForm } from "../types"
-import '../styles/form/Form.css'
 
 import Header2 from "../components/Header2"
-import Header from "../components/Header"
+
+import '../styles/form/Form.css'
 
 const SignIn = () => {
     const [form, setForm] = useState<LoginForm>()
@@ -32,14 +32,13 @@ const SignIn = () => {
             }
             return response.json()
         }).then(json => {
-            console.log(json)
+            setCliente(json)
         })
-
     }
 
     return (
         <>
-            <Header />
+            <Header2 />
             <section className="form">
                 <h2>LOG INTO YOUR ACCOUNT</h2>
                 <form onSubmit={handleSubmit}>
@@ -57,10 +56,9 @@ const SignIn = () => {
                         </div>
                     </div>
                     {/* Not found error */}
-                    {loginError == true ? <p>Verifique as suas credenciais</p> : <></>}
+                    {loginError == true ? <p color="red">Verifique as suas credenciais</p> : <></>}
 
                     <button className="submitButton"><img src="" alt="{img check}" />FINISH</button>
-
                 </form>
             </section>
         </>

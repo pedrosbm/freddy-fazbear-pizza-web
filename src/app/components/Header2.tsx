@@ -1,8 +1,8 @@
 import Image from 'next/image'
 import { Link } from 'react-router-dom'
-import { useState } from 'react'
-
 import logo from '../imgs/logo.png'
+
+import '../styles/header/Header.css'
 
 const Header2 = () => {
 

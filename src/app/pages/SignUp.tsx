@@ -1,10 +1,11 @@
 import { use, useState } from "react"
-import Header2 from "../components/Header2"
 import { json } from "stream/consumers"
+import { SignUpForm } from "../types"
+import { Link } from "react-router-dom"
+
+import Header2 from "../components/Header2"
 
 import '../styles/form/Form.css'
-import { SignUpForm } from "../types"
-import Header from "../components/Header"
 
 const SignUp = () => {
     const [form, setForm] = useState<SignUpForm>()
@@ -39,7 +40,7 @@ const SignUp = () => {
 
     return (
         <>
-            <Header />
+            <Header2 />
             <section className="form">
                 <h2>CREATE YOUR ACCOUNT</h2>
                 <form onSubmit={handleSubmit}>
@@ -70,6 +71,10 @@ const SignUp = () => {
                             <input name="confirm" type="password" onChange={handleConfirmationChange} />
                         </div>
                     </div>
+
+                    <Link to="/SignIn">
+                        <p>Já tenho uma conta</p>
+                    </Link>
 
                     <button className="submitButton"><img src="" alt="{img check}" />FINISH</button>
 

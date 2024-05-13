@@ -11,9 +11,10 @@ const Page = () =>{
     return(
         <Router>
             <Routes>
-                <Route path="/" Component={SignIn}/>
-                <Route path="/Account" Component={SignUp}/>
+                <Route path="/" Component={HomePage}/>
+                <Route path="/SignIn" Component={SignIn}/>
                 <Route path="/SignUp" Component={SignUp}/>
+                <Route path="/Account" Component={Account}/>
             </Routes>
         </Router>
     )
